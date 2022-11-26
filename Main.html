@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements - HTML</title>
+    <link href="CSS/Style.css" rel="stylesheet" type="text/css" /> 
+    <link href="CSS/Favicon.png" rel="icon" type="image/x-icon" />
+    <base target="_blank" /> 
+</head>
+<body>
+    <h1>Elementos no HTML</h1> 
+    <p>Elementos no <em><abbr id="ts" title="Hyper Text Markup Language">HTML</abbr></em>, também chamados de "tags", servem para nós estruturarmos nossa página, colocando títulos, imagens, paragráfos, listas, abreviações e entre outras estruturas.</br> Como estamos falando da página, incluímos ambas as partes, o <em>&lt;body&gt;</em> e o <em>&lt;head&gt;</em>, ou seja, estas estruturas podem ser tanto um elemento totalmente</br> visível (como um título), ou até mesmo <a href="https://pt.wikipedia.org/wiki/Favicon">favicons</a> e elementos não vísiveis, utilizados apenas para SEO. </br> </p> 
+    <ul type="square" id="isee"> 
+        <h3>Elementos visíveis na página </h3>
+        <li onmouseenter="enterH()" onmouseleave="out1()" id="cu"><code title="<h1> ; <h2> ; <h3> .. <h6>"> &lt;h1&gt; </code> &nbsp;- Tag utilizada para fazer <em>Títulos</em><span id="h"></span></li> 
+        <li onmouseenter="enterP()" onmouseleave="out2()"><code> &lt;p&gt;  </code>  &nbsp; &nbsp;- Tag utilizada para fazer <em>parágrafos</em> <span id="p"></span></li>
+        <li onmouseenter="enterUL()" onmouseleave="out3()"><code> &lt;ul&gt; </code> &nbsp;- Tag utilizada para fazer <em>listas não ordenadas</em><span id="ul"></span></li>  
+        <li onmouseenter="enterOL()" onmouseleave="out4()"><code> &lt;ol&gt; </code> &nbsp;- Tag utilziada para fazer <em>listas ordenadas </em><span id="ol"></span></li>
+        <li onmouseenter="enterLI()" onmouseleave="out5()"><code> &lt;li&gt; </code>  &nbsp;- Tag utilizada para fazer <em>linhas nas listas</em><span id="li"></span></li>
+        <li onmouseenter="enterIMG()" onmouseleave="out6()"><code> &lt;img&gt;</code> - Tag utilizada para colocar uma <em>imagem</em><span id="img"></span></li>
+    </ul>
+    <ul type="square" id="isee"> 
+        <h3>Elementos não visíveis &sol; parcialmente visíveis na página </h3>
+        <li><code> &lt;title&gt; </code> - Tag utilizada colocar um <em>título na aba</em></li>
+        <li><code> &lt;abbr&gt; </code> - Tag utilizada para dar <em>significado a uma sigla</em></li>  
+        <li><code> &lt;link&gt; </code> - Tag utilziada para fazer <em>linkar um conteúdo CSS externo</em></li>
+        <li><code> &lt;li&gt;</code>  &nbsp;- Tag utilizada para fazer <em>linhas nas listas</em></li>
+    </ul>
+    
+    <script> 
+        var pp = document.getElementById('p')
+        var hh = document.getElementById('h')
+        var uul = document.getElementById('ul')
+        var ool = document.getElementById('ol')
+        var lli = document.getElementById('li')
+        var img = document.getElementById('img')
+        var saiu1 = document.getElementsByTagName('span')[0]
+        var saiu2 = document.getElementsByTagName('span')[1]
+        var saiu3 = document.getElementsByTagName('span')[2]
+        var saiu4 = document.getElementsByTagName('span')[3]
+        var saiu5 = document.getElementsByTagName('span')[4]
+        var saiu6 = document.getElementsByTagName('span')[5]
+
+        function enterH(){
+            hh.innerHTML=  `<code style='color:blue; font-size: 18px;'> &lt;h1&gt; título &lt;&sol;h1&gt; </code>`
+        } 
+        function enterP(){
+            pp.innerHTML=  `<code style='color:blue; font-size: 18px;'> &lt;p&gt; parágrafo &lt;&sol;p&gt; </code>`
+        } 
+        function enterUL(){
+            uul.innerHTML=  `<pre> <code style='color:blue; font-size: 18px; height: 1px;'> &lt;ul&gt;
+        &lt;li&gt; conteúdo não ordenado &lt;&sol;li&gt; 
+  &lt;ul&gt; </code> </pre>`
+        } 
+        function enterOL(){
+            ool.innerHTML=  `<pre> <code style='color:blue; font-size: 18px;'> &lt;ol&gt;
+        &lt;li&gt; conteúdo ordenado &lt;&sol;li&gt; 
+  &lt;ol&gt; </code> </pre>`
+        } 
+        function enterLI(){
+            lli.innerHTML=  `<code style='color:blue; font-size: 18px;'> &lt;li&gt; lista &lt;&sol;li&gt; </code>`
+        } 
+        function enterIMG(){
+            img.innerHTML=  `<code style='color:blue; font-size: 18px;'> &lt;img href="diretório/link" alt="título da imagem"&gt; </code>`
+        } 
+        function out1(){
+            saiu1.innerHTML=''
+        }
+        function out2(){
+            saiu2.innerHTML=''
+        }
+        function out3(){
+            saiu3.innerHTML=''
+        }
+        function out4(){
+            saiu4.innerHTML=''
+        }
+        function out5(){
+            saiu5.innerHTML=''
+        }
+        function out6(){
+            saiu6.innerHTML=''
+        }
+    </script> 
+</body>
+</html>

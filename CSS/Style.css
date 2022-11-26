@@ -1,0 +1,35 @@
+body{
+    background: linear-gradient(45deg, #FFE15D, #F49D,  #F49D) no-repeat;
+    color:rgba(42, 22, 22, 0.9);
+    margin-left: 35px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin-top: 25px;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+p,#ts{
+    font-size: 25px;
+    text-decoration: none;
+    margin-bottom: 100px;
+}
+
+h3{
+    margin: 2px 0px 5px -30px;
+    font-size: 32px;
+}
+ul#isee{
+    margin-bottom: 170px;
+    font-size: 22px;
+    margin-left: 35px;
+
+}
+
+em {
+    color: rgba(215, 75, 75, 0.867);
+}
