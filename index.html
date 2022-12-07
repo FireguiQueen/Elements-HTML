@@ -10,24 +10,32 @@
     <base target="_blank" /> 
 </head>
 <body>
-    <h1>Elementos no HTML</h1> 
-    <p>Elementos no <em><abbr id="ts" title="Hyper Text Markup Language">HTML</abbr></em>, também chamados de "tags", servem para nós estruturarmos nossa página, colocando títulos, imagens, paragráfos, listas, abreviações e entre outras estruturas.</br> Como estamos falando da página, incluímos ambas as partes, o <em>&lt;body&gt;</em> e o <em>&lt;head&gt;</em>, ou seja, estas estruturas podem ser tanto um elemento totalmente</br> visível (como um título), ou até mesmo elementos não vísiveis, utilizados apenas para SEO. </br> </p> 
-    <ul type="square" id="isee"> 
-        <h3>Elementos visíveis na página </h3>
-        <li onmouseenter="enterH()" onmouseleave="out1()" id="cu"><code title="<h1> ; <h2> ; <h3> .. <h6>"> &lt;h1&gt; </code> &nbsp;- Tag utilizada para fazer <em>Títulos</em><span id="h"></span></li> 
-        <li onmouseenter="enterP()" onmouseleave="out2()"><code> &lt;p&gt;  </code>  &nbsp; &nbsp;- Tag utilizada para fazer <em>parágrafos</em> <span id="p"></span></li>
-        <li onmouseenter="enterUL()" onmouseleave="out3()"><code> &lt;ul&gt; </code> &nbsp;- Tag utilizada para fazer <em>listas não ordenadas</em><span id="ul"></span></li>  
-        <li onmouseenter="enterOL()" onmouseleave="out4()"><code> &lt;ol&gt; </code> &nbsp;- Tag utilziada para fazer <em>listas ordenadas </em><span id="ol"></span></li>
-        <li onmouseenter="enterLI()" onmouseleave="out5()"><code> &lt;li&gt; </code>  &nbsp;- Tag utilizada para fazer <em>linhas nas listas</em><span id="li"></span></li>
-        <li onmouseenter="enterIMG()" onmouseleave="out6()"><code> &lt;img&gt;</code> - Tag utilizada para colocar uma <em>imagem</em><span id="img"></span></li>
-    </ul>
-    <ul type="square" id="isee"> 
-        <h3>Elementos não visíveis &sol; parcialmente visíveis na página </h3>
-        <li><code> &lt;title&gt; </code> - Tag utilizada colocar um <em>título na aba</em></li>
-        <li><code> &lt;abbr&gt; </code> - Tag utilizada para dar <em>significado a uma sigla</em></li>  
-        <li><code> &lt;link&gt; </code> - Tag utilziada para fazer <em>linkar um conteúdo CSS externo</em></li>
-        <li><code> &lt;li&gt;</code>  &nbsp;- Tag utilizada para fazer <em>linhas nas listas</em></li>
-    </ul>
+    <header>
+        <h1>Elementos no HTML</h1>
+    </header> 
+    <main>
+        <p>Elementos no <em><abbr id="ts" title="Hyper Text Markup Language">HTML</abbr></em>, também chamados de "tags", servem para nós estruturarmos nossa página, colocando títulos, imagens, paragráfos, listas, abreviações e entre outras estruturas.</br> Como estamos falando da página, incluímos ambas as partes, o <em>&lt;body&gt;</em> e o <em>&lt;head&gt;</em>, ou seja, estas estruturas podem ser tanto um elemento totalmente</br> visível (como um título), ou até mesmo elementos não vísiveis, utilizados apenas para SEO. </br> </p> 
+    </main>
+
+    <div id="listas"> 
+        <ul type="square" id="isee"> 
+            <h3>Elementos visíveis na página </h3>
+            <li onmouseenter="enterH()" onmouseleave="out1()" id="cu"><code title="<h1> ; <h2> ; <h3> .. <h6>"> &lt;h1&gt; </code> &nbsp;- Tag utilizada para fazer <em>Títulos</em><span id="h"></span></li> 
+            <li onmouseenter="enterP()" onmouseleave="out2()"><code> &lt;p&gt;  </code>  &nbsp; &nbsp;- Tag utilizada para fazer <em>parágrafos</em> <span id="p"></span></li>
+            <li onmouseenter="enterUL()" onmouseleave="out3()"><code> &lt;ul&gt; </code> &nbsp;- Tag utilizada para fazer <em>listas não ordenadas</em><span id="ul"></span></li>  
+            <li onmouseenter="enterOL()" onmouseleave="out4()"><code> &lt;ol&gt; </code> &nbsp;- Tag utilziada para fazer <em>listas ordenadas </em><span id="ol"></span></li>
+            <li onmouseenter="enterLI()" onmouseleave="out5()"><code> &lt;li&gt; </code>  &nbsp;- Tag utilizada para fazer <em>linhas nas listas</em><span id="li"></span></li>
+            <li onmouseenter="enterIMG()" onmouseleave="out6()"><code> &lt;img&gt;</code> - Tag utilizada para colocar uma <em>imagem</em><span id="img"></span></li>
+        </ul>
+        <ul type="square" id="isee"> 
+            <h3>Elementos não visíveis &sol; parcialmente visíveis na página </h3>
+            <li><code> &lt;title&gt; </code> - Tag utilizada colocar um <em>título na aba</em></li>
+            <li><code> &lt;abbr&gt; </code> - Tag utilizada para dar <em>significado a uma sigla</em></li>  
+            <li><code> &lt;link&gt; </code> - Tag utilziada para fazer <em>linkar um conteúdo CSS externo</em></li>
+            <li><code> &lt;header&gt;</code>  &nbsp;- Tag utilizada para fazer <em>um cabeçalho na página</em></li>
+            <li><code> &lt;table&gt;</code>  &nbsp;- Tag utilizada para fazer <em>uma tabela na página</em></li>
+        </ul>
+    </div>
     
     <script> 
         var pp = document.getElementById('p')
@@ -50,7 +58,7 @@
             pp.innerHTML=  `<code style='color:blue; font-size: 18px;'> &lt;p&gt; parágrafo &lt;&sol;p&gt; </code>`
         } 
         function enterUL(){
-            uul.innerHTML=  `<pre> <code style='color:blue; font-size: 18px; height: 1px;'> &lt;ul&gt;
+            uul.innerHTML=  `<pre> <code style='    color:blue; font-size: 18px; height: 1px;'> &lt;ul&gt;
         &lt;li&gt; conteúdo não ordenado &lt;&sol;li&gt; 
   &lt;ul&gt; </code> </pre>`
         } 
